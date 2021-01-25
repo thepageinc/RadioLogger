@@ -1,0 +1,36 @@
+{
+  "name": "radiologger",
+  "version": "1.0.0",
+  "description": "Radio Logging Application",
+  "main": ".eslint.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^17.0.1",
+    "sequelize": "^6.4.0",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbowne1/RadioLogger.git"
+  },
+  "keywords": [
+    "SWL",
+    "Ham",
+    "Logging",
+    "Amateur",
+    "Radio"
+  ],
+  "author": "Gregory Bowne",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/gbowne1/RadioLogger/issues"
+  },
+  "homepage": "https://github.com/gbowne1/RadioLogger#readme"
+}

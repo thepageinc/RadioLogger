@@ -84,7 +84,8 @@ Some users may like to log new frequencies while using their scanner, especially
 
 - ARRL Logbook of the World (LoTW) http://www.arrl.org/logbook-of-the-world and https://lotw.arrl.org/lotwuser/default
 
-  * Their Developer information: https://lotw.arrl.org/lotw-help/developer-information/?lang=en and http://www.arrl.org/developer 
+  * Their Developer information: https://lotw.arrl.org/lotw-help/developer-information/?lang=en and http://www.arrl.org/developer and http://www.arrl.org/files/file/LoTW_Developer/DeveloperIntro.pdf
+  
 
 - Radio Reference [http://www.radioreference.org] ; See -- VHF/UHF Radio Scanner Logging
 
