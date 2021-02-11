@@ -1,0 +1,80 @@
+repository:
+  name:
+  description:
+  homepage:
+  topics:
+	has_issues: true
+  has_wiki: true
+  has_projects: true
+  has_downloads: true
+
+# See https://developer.github.com/v3/repos/#edit for all available settings.
+
+  # The name of the repository. Changing this will rename the repository
+  name: 
+
+  # A short description of the repository that will show up on GitHub
+  description:
+
+  # Updates the default branch for this repository.
+  default_branch: main
+
+# Repository settings set via https://github.com/gbowne1/RadioLogger/settings
+# Note: Please Don't edit this file directly.
+# Edit https://github.com/ instead.
+
+
+
+labels:
+  - name: help wanted
+    oldname: help-wanted
+    color: 0e8a16
+  - name: more-information-needed
+    color: d93f0b
+  - name: bug
+    color: b60205
+  - name: feature
+    color: 1d76db
+  - name: good first issue
+		color: "5319e7"
+		labels:
+  - name: "duplicate"
+    color: cfd3d7
+  - name: "invalid"
+    color: cfd3d7
+  - name: "P0"
+    color: b60205
+    description: "blocker: fix immediately!"
+  - name: "P1"
+    color: d93f0b
+    description: "critical: next release"
+  - name: "P2"
+    color: e99695
+    description: "major: an upcoming release"
+  - name: "P3"
+    color: fbca04
+    description: "minor: not priorized"
+  - name: "P4"
+    color: fef2c0
+    description: "unimportant: consider wontfix or other priority"
+  - name: "question"
+    color: d876e3
+  - name: "type: bug"
+    color: 0052cc
+  - name: "type: documentation"
+    color: 0052cc
+  - name: "type: feature request"
+    color: 0052cc
+  - name: "wontfix"
+    color: ffffff
+
+# Not currently implemented by probot/settings, but manually implemented in script/deploy
+branch_protection:
+  restrictions: null
+  enforce_admins: false
+  required_status_checks:
+    strict: true
+    contexts:
+      - "continuous-integration/travis-ci"
+  required_pull_request_reviews:
+    require_code_owner_reviews: true

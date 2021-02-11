@@ -33,7 +33,7 @@
     * Transmitter Power in mW (miliwatt), W (Watt(s), kW (Kilowatts) or MW (Megawatts) if known from published data.
     * Some publications will indicate which direction [towards a specific geographical region] (ie N. Asia) a particular transmission was intended to be received. [This probably should be a selection box or drop down list]
     * Alternative Frequencies that an identical transmission can/could be heard [in kHz or MHz format]
-    * Brief audio receiption report as to quality of received transmission in SINAD, SINPO or a 5x9 ; 599 format or S units (typically +9 if strong as indicated on Volume Unit/S-Meter of receiver)  May also include text input field which may say Weak, Strong, Inaudible, Fades, etc.
+    * Brief audio receiption report as to quality of received transmission in SINAD, SINPO or a 5x9 ; 599 format or S units or in dB units (typically +9 if strong as indicated on Volume Unit/S-Meter of receiver)  May also include text input field which may say Weak, Strong, Inaudible, Fades, etc.
 
  * Export Save to logbook PDF, .txt or .doc/.docx or .xls/.xlsx or CSV formats.  
  * Import logs from other formats and popular logging programs. Possibly ability to store scanned images of paper log forms. See integrations below.
