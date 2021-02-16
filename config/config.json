@@ -1,11 +1,12 @@
-no{
+{
   "development": {
-    "username": "",
-    "password": "password",
+    "username": "root",
+    "password": "null",
     "database": "radiologger",
     "host": "localhost",
     "dialect": "postgres",
-    "operatorsAliases": false
+    "operatorsAliases": "false",
+		"storage": "development.sqlite"
   }
 },
   "test": {

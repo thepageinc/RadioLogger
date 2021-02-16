@@ -1,0 +1,30 @@
+name: 'BuildExe'
+on:
+  push:
+    branches:
+      - 'master'
+jobs:
+  BuildExe:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ilammy/msvc-dev-cmd@v1
+      - uses: ayltai/setup-graalvm@v1
+        with:
+          java-version: 11
+          graalvm-version: 20.1.0
+      - uses: eskatos/gradle-command-action@v1
+        with:
+          arguments: jar
+          gradle-version: 6.7
+      - run: native-image -cp build/libs/qxsl.jar
+      - uses: crazy-max/ghaction-upx@v1
+        with:
+          file: qxsl.exe
+          args: --lzma -fq
+      - uses: svenstaro/upload-release-action@v2
+        with:
+          tag: nightly
+          file: qxsl.exe
+          overwrite: true
+          repo_token: ${{secrets.GITHUB_TOKEN}}
