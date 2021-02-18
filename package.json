@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Radio Logging Application",
   "main": ".eslint.js",
+	"private": "false",
   "directories": {
     "doc": "docs"
-  },
+	},
   "dependencies": {
     "express": "^4.17.1",
     "react": "^17.0.1",
@@ -13,13 +14,15 @@
     "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {},
-  "scripts": {
+	"jquery": "^3.5.1",
+
+	"scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+	},
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gbowne1/RadioLogger.git"
-  },
+		"type": "git",
+		"url": "git://github.com/gbowne1/radiologger.git"
+	}
   "keywords": [
     "SWL",
     "Ham",
