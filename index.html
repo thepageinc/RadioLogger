@@ -4,6 +4,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Shortwave Log Book Entry</title>
+
+	<link rel="preconnect" href="https://storage.googleapis.com" />
+	<link rel="preconnect" href="https://www.google-analytics.com" />
+	<link rel="preconnect" href="https://www.googletagmanager.com" />
+	<link rel="preconnect" href="https://stats.g.doubleclick.net"/>
+	<link rel="preconnect" href="https://www.google.com"/>
+	<link rel="preconnect" href="https://use.fontawesome.com"/>
+	<link rel="preconnect" href="https://bid.g.doubleclick.net"/>
+	<link rel="preconnect" href="https://googleads.g.doubleclick.net"/>
+
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -89,9 +99,9 @@
 	<label for="datetime-local"> Time (UTC/GMT): </label>
 	<input type="time">
 	<label for="number"> Frequency: </label>
-	<input type="number" step="0.01" min="1800.00" max="29700.00" pattern="[0-9]+[,.]+[0-9]" value="1800.00"/>
+	<input type="number" step="0.01" min="1800.00" max="29700.00" pattern="[0-9]+[,.]+[0-9]" value="1,800.00"/>
 	<label for="number"> Alt. Frequency: </label>
-	<input type="number" step="0.01" min="1800.00" max="29700.00" pattern="[0-9]+[,.]+[0-9]" value="1800.00"/>
+	<input type="number" step="0.01" min="1800.00" max="29700.00" pattern="[0-9]+[,.]+[0-9]" value="1,800.00"/>
 	<br/>
 
 	<label for="Class">Class:</label>
@@ -105,7 +115,7 @@
 	<input type="time">
 	<label for="datetime-local"> End Time (UTC/GMT): </label>
 	<input type="time">
-  <label for="text" Station: >Station:</label>
+  <label for="text">Station:</label>
 	<input type="text">
 
 
@@ -115,19 +125,41 @@
 	<select name="Countries" id="Countries">
 		<option value="United States"> </option>
 	</select>
-<label for="Continents">Continent: </label>
+<label for="Continents">Target Continent: </label>
 	<select name="Continents" id="Continents">
 		<option value="N. America">N. America</option>
 		<option value="N. America">C. America</option>
 		<option value="N. America">S. America</option>
 
 	</select>
+	<label for="ITUZone"> ITU Zone: </label>
+	<select name="ITUZone" id="ITUZone">
+  </select>
 	<label for="ITURegion"> ITU Region: </label>
-	<select name="ITURegion" id="ITURegion">
-		<option value="N. America">N. America</option>
-		<option value="N. America">C. America</option>
-		<option value="N. America">S. America</option>
-	</select>
+	<select name="ITURegion" id="ITURegion" value="1">
+
+<select name="zone">
+    <?php for ($i = 1; $i <= 90; $i++) : ?>
+        <option value="">
+				<?php echo $i; ?>
+				<?php echo $i; ?>
+			 </option>
+    <?php endfor; ?>
+</select>
+
+<script>
+
+	for(var i=1; i<=24; i++){
+    var select = document.getElementById("hours");
+    var option = document.createElement("OPTION");
+    select.options.add(option);
+    option.text = i;
+    option.value = i;
+}
+
+</script>
+
+	<!-- ITU Zones per https://www.mapability.com/ei8ic/maps/ituzone.php #1 through #90-->
 
 	<label for="number"> SINPO/SIO: </label>
 	<input type="number" min="11111" max="55555">
@@ -177,9 +209,18 @@
 
 		<!-- Tx Power is expressed with a number usually in .5KW increments-->
 
+		<label for="Seasons">Choose a season:</label>
+		<select name="Seasons" id="Seasons">
 
-	<label for="Mode">Choose a mode:</label>
-	<select name="Bands" id="Bands">
+			<option value="Winter">Winter</option>
+			<option value="Spring">Spring</option>
+			<option value="Summer">Summer</option>
+			<option value="Fall">Fall</option>
+		</select>
+
+		<label for="Mode">Choose a mode:</label>
+
+	<select name="Bands" id="bands1">
 		<option value="AM">AM</option>
 		<option value="CW">CW</option>
 		<option value="LSB">LSB</option>
@@ -190,14 +231,23 @@
 		<option value="PSK">RTTY</option>
 	</select>
 
+	<select class="form-control" style="width: 250px">
+		<option>Is this signal Jammed?</option>
+		<option>Yes</option>
+		<option>No</option>
+	</select>
+
+		<input type="text" size="30" maxlength="500" placeholder="Via" value=""  class="form-control">
+
+
 <br/>
 
 	<label for="comments">Comments:</label>
 	<textarea id="comments" name="Comments" rows="4" cols="50">
 
 	</textarea>
-	<label for="comments">Programming Notes:</label>
-	<textarea id="comments" name="Comments" rows="4" cols="50"> </textarea>
+	<label for="notes">Programming Notes:</label>
+	<textarea id="notes" name="notes" rows="4" cols="50"> </textarea>
 
 	<br/>
 
@@ -210,8 +260,16 @@
 		<option>Is this signal Jammed?</option>
 		<option>Yes</option>
 		<option>No</option>
-</select>
+	</select>
 
+	<select class="form-control" style="width: 250px">
+		<option>Has this schedule changed?</option>
+		<option>Yes</option>
+		<option>No</option>
+	</select>
+
+	<input type="checkbox" id="changed1" name="Schedule Changed" value="QSL Received">
+  <label for=""> Schedule Changed </label><br>
 
 	<p>Click on the "Choose File" button to upload a audio file:</p>
 
@@ -227,7 +285,7 @@
 
 
 
-</form>
+</form></select>
 </form>
 </body>
 </html>
