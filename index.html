@@ -162,18 +162,22 @@
 					<option value="N. America">C. America</option>
 					<option value="N. America">S. America</option>
 				</select>
+
+
+
+				</select>
 				<label for="ITUZone"> ITU Zone: </label>
 				<select name="ITUZone" id="ITUZone"></select>
 				<label for="ITURegion"> ITU Region: </label>
 				<select name="ITURegion" id="ITURegion" value="1">
-					<select name="zone">
+					<!--  <select name="zone">
 						<?php for ($i = 1; $i <= 90; $i++) : ?>
 						<option value="">
 							<?php echo $i; ?>
 							<?php echo $i; ?>
 						</option>
 						<?php endfor; ?>
-					</select>
+					</select> -->
 					<!--
 <script>
 
@@ -306,6 +310,16 @@
 						<option>No</option>
 					</select>
 
+					  <div id="wrapper">
+						<label for="yes_no_radio">Do you agree to the terms?</label>
+						<p>
+						<input type="radio" name="yes_no" checked>Yes</input>
+						</p>
+						<p>
+						<input type="radio" name="yes_no">No</input>
+						</p>
+						</div>
+
 					<select class="form-control" style="width: 250px">
 						<option>Has this schedule changed?</option>
 						<option>Yes</option>
@@ -320,6 +334,15 @@
 					/>
 					<label for=""> Schedule Changed </label
 					><br />
+
+					<fieldset>
+						<legend>Some long winded yes or no question?</legend>
+						<input type="radio" name="the_question" id="the_question_yes" value="1">
+						<label for="the_question_yes" class="after_radio">Yes</label>
+						<input type="radio" name="the_question" id="the_question_no" value="0">
+						<label for="the_question_no" class="after_radio">No</label>
+					  </fieldset>
+
 
 					<p>Click on the "Choose File" button to upload a audio file:</p>
 
