@@ -6,9 +6,9 @@
     "host": "localhost",
     "dialect": "postgres",
     "operatorsAliases": "false",
-		"storage": "development.sqlite"
-  }
-},
+		"storage": "development.postgres"
+  },
+
   "test": {
     "username": "root",
     "password": null,

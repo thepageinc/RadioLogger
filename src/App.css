@@ -37,13 +37,6 @@
 	}
 }
 
-@font-face {
-	font-family: 'ew';
-	src: url("../fonts/ew.eot?t39no9");
-	src: url("../fonts/ew.eot?#iefixt39no9") format("embedded-opentype"), url("../fonts/ew.woff?t39no9") format("woff"), url("../fonts/ew.ttf?t39no9") format("truetype"), url("../fonts/ew.svg?t39no9#ew") format("svg");
-	font-weight: normal;
-	font-style: normal
-}
 
 [class^="icon-"], [class*=" icon-"] {
 	display: inline-block;
@@ -234,9 +227,6 @@
 	content: "\e618"
 }
 
-body {
-	font-family: "Verdana", "Source Sans Pro", "Helvetica", "Arial, "sans-serif"
-}
 
 .popover, .tooltip {
 	z-index: 1101
@@ -493,10 +483,6 @@ a.ew-btn {
 
 .ew-pointer {
 	cursor: pointer
-}
-
-.ew-aggregate::after {
-	content: ": "
 }
 
 .ew-table-header .ew-table-header-btn, .ewjtable-column-header-container {
@@ -911,10 +897,6 @@ a.ew-btn {
 	font-weight: bold
 }
 
-.ew-label-row>span::after {
-	content: " "
-}
-
 .ew-input-row {
 	margin-bottom: 1rem
 }
@@ -1014,21 +996,6 @@ li.ui-timepicker-selected, .ui-timepicker-list li:hover, .ui-timepicker-list .ui
 	font-size: 4px
 }
 
-.ew-spinner::before, .ew-spinner::after, .ew-spinner>div::before, .ew-spinner>div::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 2.25em;
-	width: .5em;
-	height: 1.5em;
-	border-radius: .2em;
-	background: #eee;
-	box-shadow: 0 3.5em #eee;
-	-webkit-transform-origin: 50% 2.5em;
-	-moz-transform-origin: 50% 2.5em;
-	-ms-transform-origin: 50% 2.5em;
-	transform-origin: 50% 2.5em
-}
 
 .ew-spinner::before {
 	background: #555
@@ -1114,19 +1081,7 @@ li.ui-timepicker-selected, .ui-timepicker-list li:hover, .ui-timepicker-list .ui
 	display: block
 }
 
-.dropdown-submenu>a::after {
-	display: block;
-	content: " ";
-	float: right;
-	width: 0;
-	height: 0;
-	border-color: transparent;
-	border-style: solid;
-	border-width: 5px 0 5px 5px;
-	border-left-color: #ccc;
-	margin-top: calc((0.875rem * 1.5 - 10px) / 2);
-	margin-right: -10px
-}
+
 
 .dropdown-submenu:hover>a::after {
 	border-left-color: #16181b
@@ -1334,10 +1289,6 @@ li.ui-timepicker-selected, .ui-timepicker-list li:hover, .ui-timepicker-list .ui
 
 .main-header .dropdown-item.disabled, .main-header .dropdown-item:disabled {
 	color: #6c757d !important
-}
-
-.ew-option:not(:last-of-type)::after {
-	content: ", "
 }
 
 .ew-lookup-text {
