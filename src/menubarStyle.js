@@ -1,10 +1,13 @@
+import { createMuiTheme, MuiThemeProvider, Theme } from '@material-ui/core/styles/createMuiTheme';
 import { makeStyles } from '@material-ui/styles';
-import { colors } from '@material-ui/core';const useStyles = makeStyles(theme => ({
+import { colors } from '@material-ui/core';
+
+const useStyles = makeStyles(theme => ({
   root: {
-    justifyContent : "left",
+    justifyContent: "left",
   },
-  drawer : {
-    paddingTop : "20px",
+  drawer: {
+    paddingTop: "20px",
     width: "250px",
   },
   item: {
@@ -20,11 +23,13 @@ import { colors } from '@material-ui/core';const useStyles = makeStyles(theme =>
     letterSpacing: 0,
     width: '100%',
   },
-  btnRoot : {
-    paddingLeft : "25px",
-    justifyContent : "left !important"
+  btnRoot: {
+    paddingLeft: "25px",
+    justifyContent: "left !important"
   },
-  subMenu : {
-    paddingLeft : "50px !important",
+  subMenu: {
+    paddingLeft: "50px !important",
   }
-}));export default useStyles;
+}));
+
+export default useStyles;

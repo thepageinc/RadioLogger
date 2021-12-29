@@ -7,6 +7,71 @@
 	<title>Document</title>
 </head>
 <body>
+<script>
+	class Navbar extends React.Component{
+    render() {
+        return (
+            <div>
+              <ul id="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+        );
+    }
+}
+
+class App extends React.Component {
+  render () {
+    return (
+      <div>
+        <Navbar/>
+        <div>
+          [Page content here]
+        </div>
+      </div>
+    )
+  }
+}
+
+
+
+ReactDOM.render(
+    <App />,
+    document.getElementById('app')
+);
+</script>
+<script>
+#nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none; }
+#nav li {
+	float: left; }
+
+#nav li a {
+		display: block;
+		padding: 8px 15px;
+		text-decoration: none;
+		font-weight: bold;
+		color: #069;
+		border-right: 1px solid #ccc; }
+
+#nav li a {
+		display: block;
+		padding: 8px 15px;
+		text-decoration: none;
+		font-weight: bold;
+		color: #069;
+		border-right: 1px solid #ccc; }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+<div id="app"></div>
 
 </body>
 </html>
